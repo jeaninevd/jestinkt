@@ -44,3 +44,39 @@ p {
     text-decoration: none;
     font-size: 1rem;
 }
+/* Layout voor de Justin-pagina */
+.justin-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Linkerkant: tekst */
+.justin-tekst {
+    width: 55%;
+    text-align: left;
+}
+
+/* Rechterkant: foto's */
+.justin-fotos {
+    width: 40%;
+    text-align: right;
+}
+
+/* Terug-knop linksonder */
+.terug {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ff80b3;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.terug:hover {
+    background-color: #ff4d94;
+}
