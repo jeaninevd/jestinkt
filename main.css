@@ -101,6 +101,7 @@ p {
     background-color: #ff4d94;
     transform: scale(1.05);
 }
+
 /* FOTO GRID — 5 naast elkaar, gecentreerd */
 .foto-grid {
     display: grid;
