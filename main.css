@@ -81,3 +81,15 @@ p {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(255, 128, 179, 0.4);
 }
+.justin-fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.justin-foto {
+    width: 250px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 4px solid #ff80b3;
+}
