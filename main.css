@@ -1,5 +1,4 @@
-
-/* Achtergrondkleur lichtroze */
+/* Achtergrond en basis */
 body {
     background-color: #ffe6f2;
     font-family: "Arial", sans-serif;
@@ -11,16 +10,17 @@ body {
 /* Titelstijl */
 h1 {
     color: #ff80b3;
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
 }
 
 /* Tekststijl */
 p {
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
 }
 
+/* Knop op de homepagina */
 .knop {
     display: inline-block;
     background-color: #ff80b3;
@@ -37,13 +37,6 @@ p {
     background-color: #ff4d94;
 }
 
-.terug {
-    display: inline-block;
-    margin-top: 30px;
-    color: #ff80b3;
-    text-decoration: none;
-    font-size: 1rem;
-}
 /* Layout voor de Justin-pagina */
 .justin-pagina {
     display: flex;
@@ -55,7 +48,6 @@ p {
 /* Linkerkant: tekst */
 .justin-tekst {
     width: 55%;
-    text-align: left;
 }
 
 /* Rechterkant: foto's */
@@ -80,10 +72,11 @@ p {
 .terug:hover {
     background-color: #ff4d94;
 }
+
 /* Roze kader om de tekst */
 .kader {
     border: 4px solid #ff80b3;
-    background-color: #ffe6f2;
+    background-color: #ffd9ec;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(255, 128, 179, 0.4);
