@@ -47,6 +47,28 @@ const messages = {
 
 const messageBox = document.getElementById("messageBox");
 
+// Functie om hartjes te laten vallen
+function dropHearts() {
+    for (let i = 0; i < 12; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💗";
+
+        // Willekeurige positie
+        heart.style.left = Math.random() * 100 + "vw";
+
+        // Willekeurige grootte
+        heart.style.fontSize = (20 + Math.random() * 20) + "px";
+
+        document.body.appendChild(heart);
+
+        // Verwijder hartje na animatie
+        setTimeout(() => {
+            heart.remove();
+        }, 2000);
+    }
+}
+
 // Selecteer alle vakjes
 document.querySelectorAll(".day").forEach(day => {
     const dayNumber = parseInt(day.dataset.day);
@@ -71,5 +93,8 @@ document.querySelectorAll(".day").forEach(day => {
         messageBox.style.display = "block";
         messageBox.innerHTML = messages[dayNumber] || "Ik hou van jou 💗";
         messageBox.dataset.open = dayNumber;
+
+        // Laat hartjes vallen
+        dropHearts();
     });
 });
