@@ -47,7 +47,18 @@ const messages = {
 
 const messageBox = document.getElementById("messageBox");
 
-// Functie om hartjes te laten vallen
+// Regenboogkleuren voor hartjes
+const heartColors = [
+    "#ff0000", // rood
+    "#ff7f00", // oranje
+    "#ffff00", // geel
+    "#00ff00", // groen
+    "#0000ff", // blauw
+    "#4b0082", // indigo
+    "#8b00ff"  // violet
+];
+
+// Functie om regenbooghartjes te laten vallen
 function dropHearts() {
     for (let i = 0; i < 12; i++) {
         const heart = document.createElement("div");
@@ -60,12 +71,16 @@ function dropHearts() {
         // Willekeurige grootte
         heart.style.fontSize = (20 + Math.random() * 20) + "px";
 
+        // Willekeurige regenboogkleur
+        const color = heartColors[Math.floor(Math.random() * heartColors.length)];
+        heart.style.color = color;
+
         document.body.appendChild(heart);
 
-        // Verwijder hartje na animatie
+        // Verwijder hartje na 1 seconde
         setTimeout(() => {
             heart.remove();
-        }, 2000);
+        }, 1000);
     }
 }
 
@@ -94,7 +109,7 @@ document.querySelectorAll(".day").forEach(day => {
         messageBox.innerHTML = messages[dayNumber] || "Ik hou van jou 💗";
         messageBox.dataset.open = dayNumber;
 
-        // Laat hartjes vallen
+        // Laat regenbooghartjes vallen
         dropHearts();
     });
 });
