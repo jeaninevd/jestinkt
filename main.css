@@ -140,3 +140,50 @@ p {
     transform: rotate(0deg) scale(1.08);
     box-shadow: 0 12px 25px rgba(0,0,0,0.35);
 }
+
+/* Kalender grid */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Dag-vakjes */
+.day {
+    background-color: #ffb3d9;
+    border: 3px solid #ff80b3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Gelockte dagen */
+.day.locked {
+    background-color: #ffd9ec;
+    color: #aaaaaa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Hover op open dagen */
+.day:not(.locked):hover {
+    background-color: #ff80b3;
+    transform: scale(1.05);
+}
+
+/* Bericht popup */
+.message-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border: 3px solid #ff80b3;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    display: none;
+    box-shadow: 0 0 10px rgba(255, 128, 179, 0.4);
+}
