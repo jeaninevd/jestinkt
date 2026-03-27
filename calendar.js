@@ -8,7 +8,7 @@ const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
 
 // Lieve berichtjes
 const messages = {
-    1: "Vandaag begint deze domme kalender. je mag elke dag een vakje openen en dan staat er iets liefs.. of iets gemeens in! ly 💗",
+    1: "Vandaag begint deze domme kalender. je mag.. nee MOET elke dag een vakje openen en dan staat er iets liefs.. of iets gemeens in! ly en groetjes vriendinnetje 💗",
     2: "Je bent zo lief.",
     3: "Ik ben trots op jou.",
     4: "Je maakt mij gelukkig.",
