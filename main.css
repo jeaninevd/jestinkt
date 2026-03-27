@@ -106,16 +106,37 @@ p {
 .foto-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 30px;
     justify-items: center;
     margin-top: 40px;
 }
 
-/* Foto’s net iets langer dan breed */
-.grid-foto {
+/* POLAROID STIJL */
+.polaroid {
     width: 180px;
     height: 230px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 4px solid #ff80b3;
+    background: white;
+    padding: 12px 12px 30px 12px; /* onderkant extra ruimte zoals echte polaroid */
+    border-radius: 6px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elke foto een andere draai */
+.polaroid:nth-child(2) { transform: rotate(2deg); }
+.polaroid:nth-child(3) { transform: rotate(-1deg); }
+.polaroid:nth-child(4) { transform: rotate(1deg); }
+.polaroid:nth-child(5) { transform: rotate(-3deg); }
+.polaroid:nth-child(6) { transform: rotate(3deg); }
+.polaroid:nth-child(7) { transform: rotate(-2deg); }
+.polaroid:nth-child(8) { transform: rotate(1deg); }
+.polaroid:nth-child(9) { transform: rotate(-1deg); }
+.polaroid:nth-child(10) { transform: rotate(2deg); }
+
+/* Hover: foto komt omhoog */
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
 }
