@@ -117,14 +117,13 @@ p {
     height: 230px;
     object-fit: cover;
     background: white;
-    padding: 12px 12px 30px 12px; /* onderkant extra ruimte zoals echte polaroid */
+    padding: 12px 12px 30px 12px;
     border-radius: 6px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.25);
     transform: rotate(-2deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Elke foto een andere draai */
 .polaroid:nth-child(2) { transform: rotate(2deg); }
 .polaroid:nth-child(3) { transform: rotate(-1deg); }
 .polaroid:nth-child(4) { transform: rotate(1deg); }
@@ -135,16 +134,15 @@ p {
 .polaroid:nth-child(9) { transform: rotate(-1deg); }
 .polaroid:nth-child(10) { transform: rotate(2deg); }
 
-/* Hover: foto komt omhoog */
 .polaroid:hover {
     transform: rotate(0deg) scale(1.08);
     box-shadow: 0 12px 25px rgba(0,0,0,0.35);
 }
 
-/* Kalender grid */
+/* KALENDER GRID */
 .calendar {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 15px;
     margin-top: 30px;
 }
