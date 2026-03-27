@@ -1,4 +1,4 @@
-// Startdatum: 27 maart 2026
+// Startdatum: 27 maart 2026 
 const startDate = new Date(2026, 2, 27); // maand 2 = maart
 const today = new Date();
 
