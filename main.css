@@ -20,35 +20,6 @@ p {
     font-size: 1.2rem;
 }
 
-/* Layout voor de Justin-pagina */
-.justin-pagina {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px;
-}
-
-/* Linkerkant: tekst */
-.justin-tekst {
-    width: 55%;
-}
-
-/* Rechterkant: foto's */
-.justin-fotos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.justin-foto {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 4px solid #ff80b3;
-}
-
 /* Terug-knop linksonder */
 .terug {
     position: fixed;
@@ -66,80 +37,7 @@ p {
     background-color: #ff4d94;
 }
 
-/* Roze kader om de tekst */
-.kader {
-    border: 4px solid #ff80b3;
-    background-color: #ffd9ec;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 128, 179, 0.4);
-}
-
-/* KNOPPEN ONDERAAN EN GECENTREERD */
-.knoppen-midden {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-}
-
-/* Normale roze knoppen */
-.onderknop {
-    background-color: #ff80b3;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.onderknop:hover {
-    background-color: #ff4d94;
-    transform: scale(1.05);
-}
-
-/* FOTO GRID — 5 naast elkaar, gecentreerd */
-.foto-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    justify-items: center;
-    margin-top: 40px;
-}
-
-/* POLAROID STIJL */
-.polaroid {
-    width: 180px;
-    height: 230px;
-    object-fit: cover;
-    background: white;
-    padding: 12px 12px 30px 12px;
-    border-radius: 6px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
-    transform: rotate(-2deg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.polaroid:nth-child(2) { transform: rotate(2deg); }
-.polaroid:nth-child(3) { transform: rotate(-1deg); }
-.polaroid:nth-child(4) { transform: rotate(1deg); }
-.polaroid:nth-child(5) { transform: rotate(-3deg); }
-.polaroid:nth-child(6) { transform: rotate(3deg); }
-.polaroid:nth-child(7) { transform: rotate(-2deg); }
-.polaroid:nth-child(8) { transform: rotate(1deg); }
-.polaroid:nth-child(9) { transform: rotate(-1deg); }
-.polaroid:nth-child(10) { transform: rotate(2deg); }
-
-.polaroid:hover {
-    transform: rotate(0deg) scale(1.08);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-}
-
-/* KALENDER GRID */
+/* Kalender grid */
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -149,13 +47,14 @@ p {
 
 /* Dag-vakjes */
 .day {
-    background-color: #ffb3d9;
-    border: 3px solid #ff80b3;
+    background-color: #ff80b3;
+    border: 3px solid #ff4d94;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2rem;       /* GROTERE GETALLEN */
     font-weight: bold;
+    color: white;          /* WITTE GETALLEN */
     cursor: pointer;
     transition: 0.2s;
 }
@@ -170,7 +69,7 @@ p {
 
 /* Hover op open dagen */
 .day:not(.locked):hover {
-    background-color: #ff80b3;
+    background-color: #ff4d94;
     transform: scale(1.05);
 }
 
