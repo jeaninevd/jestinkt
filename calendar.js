@@ -1,4 +1,4 @@
-/ Startdatum: 27 maart 2026
+// Startdatum: 27 maart 2026
 const startDate = new Date(2026, 2, 27); // maand 2 = maart
 const today = new Date();
 
@@ -8,7 +8,7 @@ const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
 
 // Lieve berichtjes
 const messages = {
-    1: "Vandaag begint deze domme kalender. je mag.. nee MOET elke dag een vakje openen en dan staat er iets liefs.. of iets gemeens in! ly en groetjes vriendinnetje 💗",
+    1: "Vandaag begint deze domme kalender. je mag.. neee MOET elke dag een vakje openen en dan staat er iets liefs.. of iets gemeens in! ly en groetjes van je vriendinnetje :) 💗",
     2: "Je bent zo lief.",
     3: "Ik ben trots op jou.",
     4: "Je maakt mij gelukkig.",
@@ -45,6 +45,8 @@ const messages = {
     35: "Einde van de domme kalender… maar nooit van mijn liefde voor vriendje !! 💗"
 };
 
+const messageBox = document.getElementById("messageBox");
+
 // Selecteer alle vakjes
 document.querySelectorAll(".day").forEach(day => {
     const dayNumber = parseInt(day.dataset.day);
@@ -58,8 +60,16 @@ document.querySelectorAll(".day").forEach(day => {
     day.addEventListener("click", () => {
         if (day.classList.contains("locked")) return;
 
-        const messageBox = document.getElementById("messageBox");
+        // Als het bericht al zichtbaar is → verberg het
+        if (messageBox.style.display === "block" && messageBox.dataset.open === String(dayNumber)) {
+            messageBox.style.display = "none";
+            messageBox.dataset.open = "";
+            return;
+        }
+
+        // Toon bericht
         messageBox.style.display = "block";
         messageBox.innerHTML = messages[dayNumber] || "Ik hou van jou 💗";
+        messageBox.dataset.open = dayNumber;
     });
 });
